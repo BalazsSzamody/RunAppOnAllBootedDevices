@@ -28,6 +28,8 @@ enum OptionType {
         switch self {
         case .run:
             return 5
+        case .help:
+            return 2
         default:
             return 0
         }
@@ -66,7 +68,7 @@ class Mode {
         
         guard let deviceList = consoleIO.shellRunSimctl(arguments: ["list"])?.components(separatedBy: "\n") else {
             consoleIO.writeMessage("xcrun simctl list - Failed", to: .error)
-            exit(9)
+            exit(10)
         }
         
         let bootedDevices = deviceList.filter { $0.contains("(Booted)")}
@@ -98,4 +100,5 @@ class Mode {
             _ = consoleIO.shellRunSimctl(arguments: ["launch", uuid, bundleID])
         }
     }
+    
 }
