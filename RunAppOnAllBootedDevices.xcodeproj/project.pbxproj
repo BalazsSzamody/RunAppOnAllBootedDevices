@@ -12,6 +12,7 @@
 		1B06482B214E65E700B15C9F /* ConsoleIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B064828214E65E700B15C9F /* ConsoleIO.swift */; };
 		1B06482C214E65E700B15C9F /* ErrorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B064829214E65E700B15C9F /* ErrorType.swift */; };
 		1B06482E214E72F100B15C9F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B06482D214E72F100B15C9F /* Constants.swift */; };
+		1BB69791214F74FE00295414 /* Mode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB69790214F74FE00295414 /* Mode.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -33,6 +34,7 @@
 		1B064828214E65E700B15C9F /* ConsoleIO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsoleIO.swift; sourceTree = "<group>"; };
 		1B064829214E65E700B15C9F /* ErrorType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorType.swift; sourceTree = "<group>"; };
 		1B06482D214E72F100B15C9F /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		1BB69790214F74FE00295414 /* Mode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mode.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +72,7 @@
 				1B064829214E65E700B15C9F /* ErrorType.swift */,
 				1B064827214E65E700B15C9F /* StringExtension.swift */,
 				1B06482D214E72F100B15C9F /* Constants.swift */,
+				1BB69790214F74FE00295414 /* Mode.swift */,
 			);
 			path = RunAppOnAllBootedDevices;
 			sourceTree = "<group>";
@@ -133,6 +136,7 @@
 			files = (
 				1B06482E214E72F100B15C9F /* Constants.swift in Sources */,
 				1B06482B214E65E700B15C9F /* ConsoleIO.swift in Sources */,
+				1BB69791214F74FE00295414 /* Mode.swift in Sources */,
 				1B06482A214E65E700B15C9F /* StringExtension.swift in Sources */,
 				1B06482C214E65E700B15C9F /* ErrorType.swift in Sources */,
 				1B064821214E65CB00B15C9F /* main.swift in Sources */,

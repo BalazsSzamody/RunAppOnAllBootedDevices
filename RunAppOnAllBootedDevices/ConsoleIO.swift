@@ -17,7 +17,7 @@ class ConsoleIO {
     static let shared: ConsoleIO = ConsoleIO()
     
     func shellRunSimctl(arguments: [String]) -> String? {
-        let output = shell(launchPath: Constants.xcodePath, command: Constants.xcrun, arguments: ["simctl"] + arguments)
+        let output = shell(launchPath: Constants.xcodePath, command: Constants.xcrun, arguments: [Constants.simctl] + arguments)
         consoleIO.writeMessage(output ?? "No output message on xcrun simctl \(arguments.reduce("", { $0 + $1 + " " }))")
         return output
     }
@@ -60,5 +60,9 @@ class ConsoleIO {
         let executableName = (CommandLine.arguments[0] as NSString).lastPathComponent
         
         writeMessage("\(executableName) usage:")
+        writeMessage("\(executableName) <option> ... arguments ...")
+        writeMessage("Options:")
+        writeMessage("-h, --help:\t\t\t\tShow this help message and exit")
+        writeMessage("-r, --run <build path> <app name> <bundle id>:\tInstall and run app on booted simulators")
     }
 }

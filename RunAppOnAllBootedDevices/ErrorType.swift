@@ -8,13 +8,23 @@
 
 import Foundation
 
-enum ErrorType {
+enum ErrorType: Error {
+    case wrongArgument
+    case unknown(message: String)
+    
+    var localizedDescription: String {
+        switch self {
+        case .wrongArgument:
+            return "Wrong arguments"
+        case .unknown(message: let message):
+            return message
+        }
+    }
     
     func throwError() {
         let consoleIO = ConsoleIO.shared
-        switch self {
-        default:
-            consoleIO.writeMessage("Unknown Error", to: .error)
-        }
+        consoleIO.writeMessage(self.localizedDescription, to: .error)
+        consoleIO.printUsage()
+        fatalError()
     }
 }

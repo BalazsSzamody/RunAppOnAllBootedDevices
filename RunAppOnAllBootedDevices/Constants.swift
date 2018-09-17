@@ -11,7 +11,5 @@ import Foundation
 struct Constants {
     static let xcodePath = "/usr/bin/env"
     static let xcrun = "xcrun"
-    static func appPath(projectName: String, appName: String) -> String {
-        return "~/Library/Developer/Xcode/DerivedData/\(projectName)/Build/Products/Debug-iphonesimulator/\(appName).app"
-    }
+    static let simctl = "simctl"
 }
